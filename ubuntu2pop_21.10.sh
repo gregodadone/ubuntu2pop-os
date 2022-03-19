@@ -87,6 +87,10 @@ sudo apt --yes --allow-downgrades autoremove
 sudo apt --yes --allow-downgrades dist-upgrade
 sudo apt --yes --allow-downgrades autoremove
 
+# os-prober might have been deleted, like in my case
+sudo apt --yes --allow-downgrades install os-prober
+sudo update-grub
+
 # Resetting Categories in Pop! Menu, because of a bug that changes it
 gsettings reset org.gnome.desktop.app-folders folder-children
 
